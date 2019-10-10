@@ -1,0 +1,18 @@
+//Planning to create a record
+Lead l1      = new Lead();
+l1.FirstName = 'Test';
+l1.LastName  = 'Matthew';
+l1.Company   = 'Apple';
+
+//Planning to update a record
+Lead l2 = New Lead();
+l2 =  [SELECT id,Company FROM Lead where Phone = '456356'];
+l2.Company   = 'Microsoft';
+
+
+//Create a list to add both
+List<lead> VarList = New List<lead>();
+VarList.add(l2);
+VarList.add(l1);
+upsert VarList;
+//UPSERT = UPdate + inSERT
